@@ -28,7 +28,7 @@ class AdmConferenceController extends Controller
       ];
 
       //dispatch event
-  
+      event(new \App\Events\ChangeConferenceState($data));
 
       return $data;
     }
