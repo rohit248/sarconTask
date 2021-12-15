@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\ConferenceController;
+use App\Http\Controllers\admin\AdmConferenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,5 @@ use App\Http\Controllers\user\ConferenceController;
 */
 
 Route::get('/', [ConferenceController::class, 'list']);
+
+Route::get('/admin', [AdmConferenceController::class, 'list']);
