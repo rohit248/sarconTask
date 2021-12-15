@@ -11,4 +11,25 @@ class AdmConferenceController extends Controller
     {
       return view('admin.conferences');
     }
+
+
+    public function changeSessionState(Request $request, $conference_id, $session_id)
+    {
+      $validated = $request->validate([
+          'state' => 'required|in:0,1',
+      ]);
+
+      //TODO DB update Here
+
+      $data = [
+        'session_id' => $session_id,
+        'conference_id' => $conference_id,
+        'state' => $request->get('state')
+      ];
+
+      //dispatch event
+  
+
+      return $data;
+    }
 }

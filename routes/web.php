@@ -18,3 +18,5 @@ use App\Http\Controllers\admin\AdmConferenceController;
 Route::get('/', [ConferenceController::class, 'list']);
 
 Route::get('/admin', [AdmConferenceController::class, 'list']);
+
+Route::post('/admin/conference/edit/{conference_id}/{session_id}', [AdmConferenceController::class, 'changeSessionState']);
