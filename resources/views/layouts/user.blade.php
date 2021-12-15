@@ -31,7 +31,21 @@
 
     </div>
 
+    <div class="toast position-fixed" id="myToast" data-delay="5000">
+        <div class="toast-header">
+            <strong class="me-auto"><i class="bi-gift-fill"></i> Notification!</strong>
+            <small>Just Now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+
+        </div>
+    </div>
+
     @include('includes.footer')
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/user.js') }}"></script>
 
 </body>
 
